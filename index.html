@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<title>Staying Healthy</title>
+<link rel="stylesheet" href="stylesheet.css" />
+<script src="script.js" defer></script>
+</head>
+
+<body>
+  <br>
+  <br>
+<img src="healthy.png" style = "width:1000px">
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home Page</a></li>
+    <li><a href="home.html">More Information</a></li>
+    <li><a href="game.html">Picture Book!</a></li>
+  </ul>
+</nav>
+
+<fieldset>
+<br>
+<br>
+<br>
+<center>
+<img src="how.png" style = "width:600px">
+<img src="each.png" style = "width:800px">
+</center>
+
+
+
+<p> Some sickness cannot be prevented. However, much of it can! It's important to know what
+<strong> you </strong> can do to prevent it. </p>
+
+<p> Right now, all the people are <em>sick</em>! They have a cough and a sore throat and don't know what to do!</p>
+
+<p> Lets give them some suggestions and see what happens! The red people are sick and the green people are not! </p>
+</fieldset
+</body>
+
+<fieldset>
+<button onclick="document.getElementById('a').src='greenman.png'">Wash your hands!</button>
+<button onclick="document.getElementById('a').src='redman.png'">No safety</button>
+
+<img id="a" src="redman.png" style = "width:100px">
+
+
+<button onclick="document.getElementById('b').src='greenman.png'">Wear a mask!</button>
+<button onclick="document.getElementById('b').src='redman.png'">No safety</button>
+
+<img id="b" src="redman.png" style = "width:100px">
+
+
+<button onclick="document.getElementById('c').src='greenman.png'">Don't touch your face!</button>
+<button onclick="document.getElementById('c').src='redman.png'">No safety</button>
+
+<img id="c" src="redman.png" style = "width:100px">
+
+
+<button onclick="document.getElementById('d').src='greenman.png'">Cough into elbow!</button>
+<button onclick="document.getElementById('d').src='redman.png'">No safety</button>
+
+<img id="d" src="redman.png" style = "width:100px">
+
+
+
+<button onclick="document.getElementById('e').src='greenman.png'">Social Distance!</button>
+<button onclick="document.getElementById('e').src='redman.png'">No safety</button>
+
+<img id="e" src="redman.png" style = "width:100px">
+
+<button onclick="document.getElementById('f').src='greenman.png'">Get Vaccinated!</button>
+<button onclick="document.getElementById('f').src='redman.png'">No safety</button>
+
+<img id="f" src="redman.png" style = "width:100px">
+</fieldset>
+
+<p> Social Distancing Example!!!<p>
+<fieldset>
+  <script >
+  function reset1(){
+  clearTimeout(my_time);
+  document.getElementById('i1').style.left= "400px";
+  document.getElementById('i1').style.top= "50px";
+  document.getElementById("msg").innerHTML="";
+  }
+
+
+  function disp(){
+  var step=1; // Change this step value
+  //alert("Hello");
+  var y=document.getElementById('i1').offsetTop;
+  var x=document.getElementById('i1').offsetLeft;
+  document.getElementById("msg").innerHTML="X: " + x  + " Y : " + y
+  if(y < 400 ){y= y +step;
+  document.getElementById('i1').style.top= y + "px"; // vertical movment
+  }else{
+  if(x < 800){x= x +step;
+  document.getElementById('i1').style.left= x + "px";//horizontal move
+  }
+  }
+  //////////////////////
+
+  }
+  function timer(){
+  disp();
+  my_time=setTimeout('timer()',10);
+  }
+
+  </script>
+  <img id="e" src="redman.png" width = "40" height ="40">
+
+  <img src=greenman.png id='i1'
+    style="position:absolute; left: 500; top: 100;" width = "40" height ="40">
+  <br><br><br><br>
+  <input type=button onClick=timer() value='Start'>
+  <input type=button onClick=reset1() value='Reset'>
+  <div id='msg'></div>
+
+</fieldset>
+
+
+
+
+</body>
